@@ -31,7 +31,7 @@ and will upload them to this page as soon as possible.
 
  - [**LinkIt ONE**](/docs/samples/linkit-one/)
 
- - [**Nettra RTU**](/docs/samples/nettrartu+/)
+ - [**Nettra RTU-X**](/docs/samples/nettrartu+/)
 
  - [**Smartico**](/docs/samples/smartico/)
 

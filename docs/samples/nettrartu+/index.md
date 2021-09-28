@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Nettra RTU overview
-description: ThingsBoard IoT Platform hardware samples for Nettra RTU devices.
+title: Nettra RTU-X overview
+description: ThingsBoard IoT Platform hardware samples for Nettra RTU-X devices.
 
 ---
 
@@ -10,7 +10,6 @@ description: ThingsBoard IoT Platform hardware samples for Nettra RTU devices.
 
 ## Samples
 
- - [Temperature upload over MQTT using Nettra RTU](/docs/samples/nettrartu+/rtu_temp_sensor/)
  - [Data upload over MQTT using Nettra RTU-X](/docs/samples/nettrartu+/tutorial_rtu-x/)
 
 ## Documentation

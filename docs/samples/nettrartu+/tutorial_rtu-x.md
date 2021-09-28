@@ -1,3 +1,13 @@
+---
+layout: docwithnav
+title: Data upload over MQTT using Nettra RTU-X
+description: ThingsBoard IoT Platform sample for data upload over MQTT using Nettra RTU-X
+hidetoc: "true"
+---
+
+* TOC
+{:toc}
+
 ## Introduction
 
 This guide contains instructions on how to connect your Nettra RTU-X to Thingsboard through MQTT via WiFi.
@@ -10,14 +20,14 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
 
 ### Connecting to the RTU-X
 
- Turn on the RTU-X and connect to the wifi network created by the RTU-X using the User Interface:
+ Turn on the RTU-X and connect to the wifi network created by the RTU-X. Using the User Interface:
 
    1. Go to *"Home"*.
    2. Click on *"TCP/IP"*.
    4. Specify the *"IP*" address **"192.168.4.1"**, *"Port":* **"502"** (by default).
    5. Click on *"Connect"*.
 
-   ![rtu1_step1](https://user-images.githubusercontent.com/61634031/134022796-78e22a93-5f03-4c9f-80bb-c129814b349a.png)
+   ![rtu1_step1](/images/samples/nettrartu+/tutorial_rtu-x/rtu_connect.png)
 
 ### WiFi Configuration
 
@@ -27,7 +37,7 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
    3. Check *"Station"* and enter the wifi network information 
    4. *"Apply Changes"*
    
-   ![rtu3_step3](https://user-images.githubusercontent.com/61634031/134022912-8dcbe19c-986f-4fa7-8231-823564262343.png)
+   ![rtu3_step3](/images/samples/nettrartu+/tutorial_rtu-x/rtu_wifi.png)
    
 ### MQTT Configuration
 
@@ -36,12 +46,12 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
 3. On *"Interface"* select *"WiFi"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"* (or the URI to your instance of Thingsboard). On *"Username"* paste the Device Acces Token from Thingsboard.
 4. Click on *"Apply Changes"*.
 
-![rtu5_step5](https://user-images.githubusercontent.com/61634031/134028854-17b5d9c8-c807-4b3b-a557-00ea5b25d7ac.png)
+![rtu5_step5](/images/samples/nettrartu+/tutorial_rtu-x/rtu_mqtt.png)
 
 ### Script
 
 The script is where the variables are pushed to the cloud (among many other things!). Scripts can be very complex if required. Check out [Nettra Script User Manual](http://wiki.nettra.tech/en/script) for more information.
-The following examples is just a simple one to illustrate the process, and it only sends a variable every 10 seconds and increments it.
+The following example is just a simple one to illustrate the process, and it only sends a variable every 10 seconds and increments it.
 
 1. Go to *"Script"* 
 2. Paste the following script:
@@ -58,19 +68,19 @@ while (1)
 }
 ```
 
-3. Upload it by clicking *"Compile & Apply"*.
+1. Upload it by clicking *"Compile & Apply"*.
 
-![rtu6_step6](https://user-images.githubusercontent.com/61634031/134028433-e7412285-9f4e-4d67-9f3c-80879f99191f.png)
+![rtu6_step6](/images/samples/nettrartu+/tutorial_rtu-x/rtu_script.png)
 
 ## Thingsboard
 
 You can now head to Thingsboard UI and find the device on the platform, where you will see the data coming in:
 
-![dev](https://user-images.githubusercontent.com/61634031/134029353-d4d80304-0396-4a10-b313-02a249300280.png)
+![dev](/images/samples/nettrartu+/tutorial_rtu-x/device.png)
 
 The following is a simple dashboard showing the latest value:
 
-![dash](https://user-images.githubusercontent.com/61634031/134030076-19fd80de-38fd-4114-b1f1-221f61756782.png)
+![dash](/images/samples/nettrartu+/tutorial_rtu-x/dashboard.png)
 
 ## See also
 
