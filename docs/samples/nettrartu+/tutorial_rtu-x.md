@@ -27,7 +27,12 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
    4. Specify the *"IP*" address **"192.168.4.1"**, *"Port":* **"502"** (by default).
    5. Click on *"Connect"*.
 
-   ![rtu1_step1](/images/samples/nettrartu+/tutorial_rtu-x/rtu_connect.png)
+<div align="center">
+<div style="width: 75%;">
+
+![rtu1_step1](/images/samples/nettrartu+/tutorial_rtu-x/rtu_connect.png)
+</div>
+</div>
 
 ### WiFi Configuration
 
@@ -36,8 +41,13 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
    2. Go to *"Wifi, Serial, Modbus"*
    3. Check *"Station"* and enter the wifi network information 
    4. *"Apply Changes"*
-   
+
+<div align="center">
+<div style="width: 75%;">
+
 ![rtu3_step3](/images/samples/nettrartu+/tutorial_rtu-x/rtu_wifi.png)
+</div>
+</div>
    
 ### MQTT Configuration
 
@@ -46,7 +56,12 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
 3. On *"Interface"* select *"WiFi"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"* (or the URI to your instance of Thingsboard). On *"Username"* paste the Device Acces Token from Thingsboard.
 4. Click on *"Apply Changes"*.
 
+<div align="center">
+<div style="width: 75%;">
+
 ![rtu5_step5](/images/samples/nettrartu+/tutorial_rtu-x/rtu_mqtt.png)
+</div>
+</div>
 
 ### Script
 
@@ -70,17 +85,31 @@ while (1)
 
 3. Upload it by clicking *"Compile & Apply"*.
 
+<div align="center">
+<div style="width: 75%;">
+
 ![rtu6_step6](/images/samples/nettrartu+/tutorial_rtu-x/rtu_script.png)
+</div>
+</div>
 
 ## Thingsboard
 
 You can now head to Thingsboard UI and find the device on the platform, where you will see the data coming in:
 
+<div align="center">
+<div style="width: 75%;">
+
 ![dev](/images/samples/nettrartu+/tutorial_rtu-x/device.png)
+</div>
+</div>
 
 The following is a simple dashboard showing the latest value:
+<div align="center">
+<div style="width: 45%;">
 
 ![dash](/images/samples/nettrartu+/tutorial_rtu-x/dashboard.png)
+</div>
+</div>
 
 ## See also
 
