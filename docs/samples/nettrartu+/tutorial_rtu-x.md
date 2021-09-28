@@ -37,7 +37,7 @@ The RTU-X is configured using the [RTU-X User Interface](http://wiki.nettra.tech
    3. Check *"Station"* and enter the wifi network information 
    4. *"Apply Changes"*
    
-   ![rtu3_step3](/images/samples/nettrartu+/tutorial_rtu-x/rtu_wifi.png)
+![rtu3_step3](/images/samples/nettrartu+/tutorial_rtu-x/rtu_wifi.png)
    
 ### MQTT Configuration
 
@@ -68,7 +68,7 @@ while (1)
 }
 ```
 
-1. Upload it by clicking *"Compile & Apply"*.
+3. Upload it by clicking *"Compile & Apply"*.
 
 ![rtu6_step6](/images/samples/nettrartu+/tutorial_rtu-x/rtu_script.png)
 
