@@ -4,8 +4,10 @@ title: Rule Chain templates
 description: Rule Chain templates
 ---
 
-Coming soon…
+![image](/images/coming-soon.jpg)
 
 #### Next Steps
 
-{% assign currentGuide = "RuleChainTemplates" %}{% include templates/edge/guides-banner-edge.md %}
+{% assign currentGuide = "RuleChainTemplates" %}
+{% assign docsPrefix = "edge/" %}
+{% include templates/edge/guides-banner-edge.md %}

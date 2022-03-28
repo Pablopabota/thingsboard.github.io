@@ -27,10 +27,16 @@
   docsPrefix: /docs/
 - title: Edge
   fulltitle: ThingsBoard Edge
-  description: ThingsBoard Documentation
+  description: ThingsBoard Edge Documentation
   tag: edge
   icon: /images/thingsboard-e-icon.svg
   path: /docs/edge/
+- title: PE Edge
+  fulltitle: ThingsBoard PE Edge
+  description: ThingsBoard PE Edge Documentation
+  tag: edge-pe
+  icon: /images/thingsboard-e-icon.svg
+  path: /docs/pe/edge/
 - title: IoT Gateway
   fulltitle: ThingsBoard IoT Gateway
   description: ThingsBoard Documentation
@@ -51,4 +57,20 @@
   icon: /images/trendz-icon.svg
   path: /docs/trendz/
   getStarted: /docs/trendz/getting-started/
+- title: Mobile Application
+  fulltitle: ThingsBoard Mobile Application
+  description: Mobile Application Documentation
+  tag: mobile
+  icon: /images/tb-mobile-icon.svg
+  path: /docs/mobile/
+  docsPrefix: /docs/mobile/
+  getStarted: /docs/mobile/getting-started/
+- title: PE Mobile Application
+  fulltitle: ThingsBoard PE Mobile Application
+  description: PE Mobile Application Documentation
+  tag: mobile-pe
+  icon: /images/tb-pe-mobile-icon.svg
+  path: /docs/pe/mobile/
+  docsPrefix: /docs/pe/mobile/
+  getStarted: /docs/pe/mobile/getting-started/
 

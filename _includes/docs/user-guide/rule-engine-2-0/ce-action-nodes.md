@@ -15,7 +15,7 @@ Action Nodes execute various actions based on incoming Message.
 
 ![image](/images/user-guide/rule-engine-2-0/nodes/action-create-alarm.png)
 
-This Node tries to load latest Alarm with configured **Alarm Type** for Message Originator.
+This Node tries to load the latest Alarm with configured **Alarm Type** for Message Originator.
 If **Uncleared** Alarm exist, then this Alarm will be updated, otherwise a new Alarm will be created.
 
 Node Configuration:
@@ -526,6 +526,13 @@ Configured **TTL** seconds is used for timeseries data expiration. **0** value m
 
 ![image](/images/user-guide/rule-engine-2-0/nodes/action-save-timeseries-config.png)
 
+Additionally, you could disable updating values for incoming keys for the latest timeseries data (ts_kv_latest table) if **'Skip latest persistence'** flag is set to **true**.
+This could be helpful for highly loaded use-cases to decrease the pressure on the DB. 
+Please note, this feature could be enabled when the use-case does not require advanced filtering on the Dashboards. 
+For getting the latest value, the historical data could be fetched with limit 1 and DESC order.
+
+![image](/images/user-guide/rule-engine-2-0/nodes/action-save-timeseries-config-latest.png)
+
 Expects messages with **POST_TELEMETRY_REQUEST** message type. 
 If message Type is not **POST_TELEMETRY_REQUEST**, Message will be routed via **Failure** chain.
  
@@ -538,6 +545,16 @@ Message Metadata must contain **ts** field. This field identifies timestamp in m
 
 Also, if Message Metadata contains **TTL** field, its value is used for timeseries data expiration, otherwise **TTL** 
 from Node Configuration is used.
+
+**Since TB Version 3.3.3** you can enable 'useServerTs' param to use the timestamp of the message processing instead of the timestamp from the message. 
+Useful for all sorts of sequential processing if you merge messages from multiple sources (devices, assets, etc).
+
+In the case of sequential processing, the platform guarantees that the messages are processed in the order of their submission to the queue. 
+However, the timestamp of the messages originated by multiple devices/servers may be unsynchronized long before they are pushed to the queue. 
+The DB layer has certain optimizations to ignore the updates of the "attributes" and "latest values" tables if the new record has a timestamp that is older than the previous record. 
+
+So, to make sure that all the messages will be processed correctly, one should enable this parameter for sequential message processing scenarios.
+
 
 **Expected Message Payload example:**
 {% highlight json %}
@@ -576,11 +593,13 @@ Administrator should set the custom table name without prefix: **cs_tb_**.
 
 ![image](/images/user-guide/rule-engine-2-0/nodes/action-save-to-custom-cassandra-table-name-config.png)
 
-Administrator can configure the mapping between the Message field names and Table columns name. If the mapping key is **entityId**, that is identified by the Message Originator, then to the appropriate column name(mapping value) will be write the message originator id.
+Administrator can configure the mapping between the Message field names and Table columns name. If the mapping key is **$entityId**, that is identified by the Message Originator, then to the appropriate column name(mapping value) will be write the message originator id.
 
 ![image](/images/user-guide/rule-engine-2-0/nodes/action-save-to-custom-cassandra-table-config.png)
 
-If specified message field does not exist or is not a JSON Primitive, the outbound message will be routed via **Failure** chain, otherwise, the message will be routed via **Success** chain.
+If specified message field does not exist in the **data** of the message or is not a JSON Primitive, the outbound message will be routed via **Failure** chain, otherwise, the message will be routed via **Success** chain.
+
+**NOTE**: Please make sure that you are not using **metadata** keys in the configuration - only **data** keys are possible.  
 
 <br/>
 

@@ -15,7 +15,12 @@ ThingsBoard server nodes act as a CoAP Server that supports both regular and obs
 ##### Client libraries setup
 
 You can find CoAP client libraries for different programming languages on the web. Examples in this article will be based on [CoAP cli](https://www.npmjs.com/package/coap-cli).
-In order to setup this tool, you can use instructions in our [Hello World](/docs/{{docsPrefix}}getting-started-guides/helloworld/) guide.
+In order to setup this tool on Linux or macOS, you can use the following command:
+
+```bash
+npm install coap-cli -g
+```
+{: .copy-code}
 
 **NOTE**: CoAP cli does not support query parameters. If you require to use query parameters, you should use [coap client](http://manpages.ubuntu.com/manpages/focal/man5/coap-client.5.html) instead. To install the coap-client please execute: <br>
 
@@ -31,6 +36,8 @@ Possible error codes and their reasons:
 * **4.00 Bad Request** - Invalid URL, request parameters or body.
 * **4.01 Unauthorized** - Invalid **$ACCESS_TOKEN**.
 * **4.04 Not Found** - Resource not found.
+
+The alternative authentication option is to use [X.509 Certificates](/docs/{{docsPrefix}}user-guide/ssl/coap-x509-certificates/).
 
 {% include templates/api/key-value-format.md %}
 
@@ -173,11 +180,26 @@ coap://host/api/v1/$ACCESS_TOKEN/rpc/{$id}
 ```
 
 where **$id** is an integer request identifier.
+<br/>
+<br/>
+**Let’s look at an example:**
+
+- Use **RPC debug terminal** dashboard;
+
+- Subscribe to RPC commands from the server. To do this, in the first terminal window send GET request with observe flag;
+
+- Send an RPC request "connect" to the device;
+
+- In the second terminal window simulate send a response from the device to the server;
+
+- You should receive a response from the device: {"result":"ok"}
+
+{% include images-gallery.html imageCollection="server-side-rpc" %}
 
 {% capture tabspec %}coap-rpc-command
 A,Example Subscribe,shell,resources/coap-rpc-subscribe.sh,/docs/reference/resources/coap-rpc-subscribe.sh
 B,Example Reply,shell,resources/coap-rpc-reply.sh,/docs/reference/resources/coap-rpc-reply.sh
-C,Reply Body,shell,resources/rpc-response.json,/docs/reference/resources/rpc-response.json{% endcapture %}
+C,rpc-response.json,shell,resources/rpc-response.json,/docs/reference/resources/rpc-response.json{% endcapture %}
 {% include tabs.html %}
 
 ##### Client-side RPC
@@ -189,10 +211,27 @@ coap://host/api/v1/$ACCESS_TOKEN/rpc
 ```
 
 Both request and response body should be valid JSON documents. The content of the documents is specific to the rule node that will handle your request.
+<br/>
+<br/>
+**Let's look at an example:**
+
+- Add two nodes to the Rule Chain: "script" and "rpc call reply";
+
+- In the **script** node enter the function:
+
+```shell
+return {msg: {time:String(new Date())}, metadata: metadata, msgType: msgType};
+```
+{: .copy-code}
+- Send request to the server;
+
+- You should receive a response from the server.
+
+{% include images-gallery.html imageCollection="client-side-rpc" %}
 
 {% capture tabspec %}coap-rpc-from-client
 A,Example Request,shell,resources/coap-rpc-from-client.sh,/docs/reference/resources/coap-rpc-from-client.sh
-B,Request Body,shell,resources/rpc-client-request.json,/docs/reference/resources/rpc-client-request.json
+B,rpc-client-request.json,shell,resources/rpc-client-request.json,/docs/reference/resources/rpc-client-request.json
 C,Response Body,shell,resources/rpc-server-response.json,/docs/reference/resources/rpc-server-response.json{% endcapture %}
 {% include tabs.html %}
   

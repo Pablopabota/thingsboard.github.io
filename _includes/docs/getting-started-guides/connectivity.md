@@ -4,7 +4,7 @@ In case you have not found out how to connect your device using the diagram or s
 {% endcapture %}
 {% include templates/info-banner.md content=connectivityContent %}
 
-<object width="100%" data="/images/connectivity.svg"></object>
+<object width="100%" style="max-width: max-content;" data="/images/connectivity.svg"></object>
 
 {% assign peDocsPrefix = '' %}
 {% if docsPrefix == 'paas/' %}
@@ -18,6 +18,8 @@ The built-in transport protocol implementations are applicable for devices that 
 - [MQTT API reference](/docs/{{docsPrefix}}reference/mqtt-api)
 - [CoAP API reference](/docs/{{docsPrefix}}reference/coap-api)
 - [HTTP API reference](/docs/{{docsPrefix}}reference/http-api)
+- [LwM2M API reference](/docs/{{docsPrefix}}reference/lwm2m-api)
+- [SNMP API reference](/docs/{{docsPrefix}}reference/snmp-api)
 
 Most of the protocols above support JSON, Protobuf or own data format. This is the best option for new devices when you have control over the firmware.
 

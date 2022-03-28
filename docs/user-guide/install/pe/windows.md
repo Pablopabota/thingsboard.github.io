@@ -12,6 +12,8 @@ description: Installing ThingsBoard on Windows
 * TOC
 {:toc}
 
+{% include templates/install/windows-warning-note.md %}
+
 ### Prerequisites
 
 This guide describes how to install ThingsBoard on a Windows machine.
@@ -26,12 +28,13 @@ To run ThingsBoard and Cassandra on a single machine you will need at least 8Gb 
 
 ### Step 2. ThingsBoard service installation
 
-Download and run the installation package.
+Download and extract the package.
 
 ```bash
-https://dist.thingsboard.io/thingsboard-windows-setup-{{ site.release.pe_ver }}.exe
+https://dist.thingsboard.io/thingsboard-windows-{{ site.release.pe_ver }}.zip
 ```
 {: .copy-code}
+
 
 **Note:** We assume you have installed ThingsBoard to default location: *C:\Program Files (x86)\thingsboard*  
 
@@ -71,7 +74,6 @@ license:
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/install/windows-db-postgresql.md%br%
-Hybrid <br/>PostgreSQL+Cassandra<br/><small>(recommended for > 5K msg/sec)</small>%,%hybrid%,%templates/install/windows-db-hybrid.md%br%
 Hybrid <br/>PostgreSQL+TimescaleDB<br/><small>(for TimescaleDB professionals)</small>%,%timescale%,%templates/install/windows-db-hybrid-timescale.md{% endcapture %}
 
 {% include content-toggle.html content-toggle-id="ubuntuThingsboardDatabase" toggle-spec=contenttogglespec %} 
@@ -152,6 +154,7 @@ Open the command prompt as an Administrator and execute the following command:
 ```shell
 net start tb-web-report
 ```
+{: .copy-code}
 
 Expected output:
 
