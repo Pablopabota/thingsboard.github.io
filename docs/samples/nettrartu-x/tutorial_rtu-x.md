@@ -21,17 +21,15 @@ This guide contains step-by-step instructions on how to connect your Nettra RTU-
 ### Nettra RTU
 [Nettra RTU](https://nettra.tech/en/how-we-do-it/rtu-x) called **"RTU-X"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, bluetooth, WiFi, RS485 and RS232. It is an ideal product to implement monitoring, data acquisition and control applications over a distributed data network.
 
-The RTU-X is easly configurable via a [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads). To adapt the RTU-X to each application, it runs a fully customizable script, accessible and editable from the Configuration Interface. In this guide we will provide one as an example quite simple and easy to understand.
+The RTU-X is easily configurable via its [Configuration Interface](http://wiki.nettra.tech/en/downloads). To adapt the RTU-X to each application, it runs a fully customizable script, accessible and editable from the Configuration Interface. In this guide we will provide one as an example quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your sensor data on a dashboard like the following on the right.
 <br><br>
-
 <div align="center">
 
 ![rtu_x](/images/samples/nettrartu_x/rtu_x.png) ![dashboard](/images/samples/nettrartu_x/dash.png)
 
 </div>
-
 
 ## Prerequisites <a name="prerequisites"></a>
 
@@ -58,7 +56,7 @@ Make sure to connect the positive rail of the supply to socket n°1 and its nega
 <br>
 
 ## ThingsBoard configuration <a name="tb_configuration"></a>
-  
+
 This step contains instructions that are necessary to connect your device to ThingsBoard.
 
 Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or to your Thingsboard instance. See [ThingsBoard installation options](https://thingsboard.io/docs/user-guide/install/installation-options/) page for more details on how to get a Thingsboard instance running.
@@ -74,7 +72,6 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 <br><br>
 
 3. Once the device is created, open its details and click **"Copy access token"** . Please save this device token. It will be referred to later as **"TOKEN"**.
-
 <br><br>
 <div align="center">
 <img src="/images/samples/nettrartu_x/dev_acc_tok.png" width="75%"/>
@@ -112,7 +109,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    2. Go to *"Wifi, Serial, Modbus"*.
    3. Check *"Station"* checkbox and fill in the credentials for the WiFi network.
    4. *"Apply Changes"*
-   
+
 <div align="center">
 <img src="/images/samples/nettrartu_x/rtu_step3.png" />
 </div>
