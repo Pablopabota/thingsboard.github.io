@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Temperature upload over MQTT using Nettra RTU
-description: ThingsBoard IoT Platform sample for temperature upload over MQTT using Nettra RTU
+title: Data upload over MQTT using Nettra RTU-X
+description: ThingsBoard IoT Platform sample for data upload over MQTT using Nettra RTU-X
 hidetoc: "true"
 ---
 
@@ -16,53 +16,59 @@ hidetoc: "true"
 
 ## Introduction <a name="introduction"></a>
 
-This guide contains step-by-step instructions on how to connect your Nettra RTU device to ThingsBoard Community Edition through TCP/IP via wifi, using as sample, one of the many applications that the Nettra RTU has. At the end of this guide, you will be able to monitor data using Thingsboard web UI to display it.
+This guide contains step-by-step instructions on how to connect your Nettra RTU-X device to ThingsBoard through TCP/IP via WiFi. At the end of this guide, you will be able to monitor data using Thingsboard web UI to display it.
 
 ### Nettra RTU
-[Nettra RTU](https://nettra.tech/en/how-we-do-it/rtu-x) called **"RTU-X"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, bluetooth, 802.15.4, RS485, RS232 and GPS. It is an ideal product to implement monitoring, data acquisition and control applications over a distributed data network.
+[Nettra RTU](https://nettra.tech/en/how-we-do-it/rtu-x) called **"RTU-X"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, bluetooth, WiFi, RS485 and RS232. It is an ideal product to implement monitoring, data acquisition and control applications over a distributed data network.
 
 The RTU-X is easly configurable via a [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads). To adapt the RTU-X to each application, it runs a fully customizable script, accessible and editable from the Configuration Interface. In this guide we will provide one as an example quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your sensor data on a dashboard like the following on the right.
 <br /><br/>
 
-![rtu_x](https://user-images.githubusercontent.com/61634031/133831823-b6e2420e-5669-433a-a3fa-54b506ab24b9.png) ![dash2](https://user-images.githubusercontent.com/61634031/134074200-5063cd05-6091-4f36-90a3-91771373bd65.png)
+![rtu_x](/images/samples/nettrartu-x/rtu_x.png) ![dashboard](/images/samples/nettrartu-x/dashboard.png)
 
 
 ## Prerequisites <a name="prerequisites"></a>
 
+This step shows what is necessary to accomplish this tutorial.
 
 ### Hardware
 
- - 1x [RTU-X](https://nettra.tech/en/how-we-do-it/rtu-x/)
+ - 1x RTU-X (you can get one [here](https://shop.nettra.tech/en/store/))
  - 1x 12VDC supply voltage
 
 ### Software
  - [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads).
- - You will need to have ThingsBoard server up and running. Use either [Live Demo](https://thingsboard.io/docs/user-guide/install/installation-options/?ceInstallType=liveDemo) or [Installation Guide](https://thingsboard.io/docs/user-guide/install/ubuntu/) to install ThingsBoard.
+ - You will need to have ThingsBoard server up and running. Use either [Live Demo](https://thingsboard.io/docs/user-guide/install/installation-options/?ceInstallType=liveDemo) or [Installation Guide](https://thingsboard.io/docs/user-guide/install/installation-options/) to install ThingsBoard.
 
 ## Connection diagram <a name="connection_diagram"></a>
 
-The following picture summarizes the connections for this simple project:
+The following picture show the pinout of the RTU-X:
 <br/><br/>
-![copy_941957077](https://user-images.githubusercontent.com/61634031/133837072-8340491f-ea35-4204-91e1-7d513641d7bb.png)
+![rtu_x_connections](/images/samples/nettrartu-x/rtu_x_connections.png)
+<br/>
+Make sure to connect the positive rail of the supply to socket n°1 and its negative rail to socket n°3.
+<br/>
 
 ## ThingsBoard configuration <a name="tb_configuration"></a>
-
+  
 This step contains instructions that are necessary to connect your device to ThingsBoard.
 
-Sign up ThingsBoard Web UI as [live-demo](https://demo.thingsboard.io/signup). See [Live Demo](https://thingsboard.io/docs/user-guide/install/installation-options/?ceInstallType=liveDemo) page for more details how to get your account.
+Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or to your Thingsboard instance. See [ThingsBoard installation options](https://thingsboard.io/docs/user-guide/install/installation-options/) page for more details on how to get a Thingsboard instance running.
 
 ### Device
 
 1. Go to *"Devices"* section. 
 2. Click on *"+"* button and create a device with the name **"RTU-X"**. Set *"Device type"* to **"default"**.
 <br/><br/>
-![add_opt (1)](https://user-images.githubusercontent.com/61634031/133840783-8b605dfd-3a50-430b-bb63-a8244a53cad9.png)
+<div align="center">
+![add_device](/images/samples/nettrartu_x/add_device.png)
+</div>
 <br/><br/>
-3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$RTU_DEMO_TOKEN**.
+3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
 <br/><br/>
-![access_opt (3)](https://user-images.githubusercontent.com/61634031/133840798-1ea7dc07-c157-4fda-ab1c-9ecb0bba1bb8.png)
+![dev_acc_tok](/images/samples/nettrartu_x/dev_acc_tok.png)
 
 ### Dashboard
 
@@ -81,30 +87,28 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
 
    1. Go to *"Home"*.
    2. Click on *"TCP/IP"*.
-   4. Specify the *"IP*" address **"192.168.4.1"**, *"Port":* **"502"** (by default).
-   5. Click on *"Connect"*.
+   3. Specify the *"IP"* address **"192.168.4.1"**, *"Port":* **"502"** (by default).
+   4. Click on *"Connect"*.
 
-   ![rtu1_step1](https://user-images.githubusercontent.com/61634031/134022796-78e22a93-5f03-4c9f-80bb-c129814b349a.png)
+   ![rtu_step1](/images/samples/nettrartu_x/rtu_step1.png)
 
  - Once you are connected you should see the following:
 
-   ![rtu2_step](https://user-images.githubusercontent.com/61634031/133849616-2b64bd94-8b5e-49d8-b9fc-a909b8d0cf3e.png)
+   ![rtu_step2](/images/samples/nettrartu_x/rtu_step2.png)
   
  - Then:
    1. Go to *"Communications"*.
    2. Go to *"Wifi, Serial, Modbus"*.
-   3. Click *"Station"* and register the data for the WiFi network.
+   3. Check *"Station"* checkbox and fill in the credentials for the WiFi network.
    4. *"Apply Changes"*
    
-   ![rtu3_step3](https://user-images.githubusercontent.com/61634031/134022912-8dcbe19c-986f-4fa7-8231-823564262343.png)
+   ![rtu_step3](/images/samples/nettrartu_x/rtu_step3.png)
    
  - Finally:
    1. Go back to *"Home"*.
-   2. Copy the *"IP"* address on *"WiFi STA information"*.
-   3. Disconnect from the RTU-X.
-   4. Change the *"IP"* address and reconnect.
+   2. Make sure the RTU-X has successfully connected to the WiFi network.
 
-   ![rtu4_step4](https://user-images.githubusercontent.com/61634031/134022869-f1ec2a5b-dfee-4571-96a4-7fd1fcd81778.png)
+   ![rtu_step4](/images/samples/nettrartu_x/rtu_step4.png)
 
 ## RTU-X configuration <a name="rtu_configuration"></a>
 
@@ -117,39 +121,40 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 3. On *"Interface"* select *"Modem"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*. On *"Password"* paste the Device Acces Token from *"Device"* step.
 4. Click on *"Apply Changes"*.
 
-![rtu5_step5](https://user-images.githubusercontent.com/61634031/134028854-17b5d9c8-c807-4b3b-a557-00ea5b25d7ac.png)
+![rtu_step5](/images/samples/nettrartu_x/rtu_step5.png)
 
 ### Script
 
- - Download this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
+ - Download (or copy) this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
 
 ```c
 /*
  * DESCRIPTION :
  *	- Sending a variable to a Thingsboard Dashboard
-*/
+ */
 // VARIABLES DEFINITION ------------------------------------------
-// Attributes
-shared uint tLog = 10;
+// User defined parameters
+uint t_log = 10; // 'variable' log time in seconds
 
-// Loggable
-telemetry float variable;
+// Loggable variable
+telemetry float variable = 0; // Parameter you want to visualize in Thingsboard
+// 'variable' could be a BLE temperature measurement, a modbus preassure sensor value,
+// a 4-20mA flowmeter value from the analog inputs and many more.
 
 // SCRIPT -----------------------------------------------------------
 while (1)
 {
-    variable = 15;
-	
-    delay_loop(tLog*1000); // 10 seconds
-    log(variable);
+    variable = variable + 1; // variable is incremented by 1 in every loop
+    log(variable);	
+    delay(t_log * 1000); // 10 seconds
 }
 ```
 
 1. Go to *"User Interface"* 
 2. Import the script clicking *"Load"*. If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
-3. Compile and save the script in the RTU-X by clicking *"Compila & Apply"*.
+3. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
-![rtu6_step6](https://user-images.githubusercontent.com/61634031/134028433-e7412285-9f4e-4d67-9f3c-80879f99191f.png)
+![rtu_step6](/images/samples/nettrartu_x/)
 
 ## Data visualization <a name="data_visualization"></a>
 
