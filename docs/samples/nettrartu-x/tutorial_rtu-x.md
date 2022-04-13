@@ -160,7 +160,8 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 ### Script
 
- - Download (or copy) this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
+1. Go to *"Script"* 
+2. Copy this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
 
 ```c
 /*
@@ -184,9 +185,7 @@ while (1)
     delay(t_log * 1000); // 10 seconds
 }
 ```
-
-1. Go to *"Script"* 
-2. Import the script clicking *"Load"*. If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
+If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
 3. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
 <div align="center">
