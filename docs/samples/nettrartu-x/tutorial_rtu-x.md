@@ -63,7 +63,9 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 2. Click on *"+"* button and create a device with the name **"RTU-X"**. Set *"Device type"* to **"default"**.
 <br/><br/>
 <div align="center">
+
 ![add_device](/images/samples/nettrartu_x/add_device.png)
+
 </div>
 <br/><br/>
 3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
