@@ -30,6 +30,8 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 ![rtu_x](/images/samples/nettrartu-x/rtu_x.png) ![dashboard](/images/samples/nettrartu-x/dashboard.png)
 
+</div>
+
 
 ## Prerequisites <a name="prerequisites"></a>
 
