@@ -26,6 +26,8 @@ The RTU-X is easly configurable via a [RTU-X Configuration Interface](http://wik
 Once you complete this sample/tutorial, you will see your sensor data on a dashboard like the following on the right.
 <br /><br/>
 
+<div align="center">
+
 ![rtu_x](/images/samples/nettrartu-x/rtu_x.png) ![dashboard](/images/samples/nettrartu-x/dashboard.png)
 
 
@@ -46,7 +48,11 @@ This step shows what is necessary to accomplish this tutorial.
 
 The following picture show the pinout of the RTU-X:
 <br/><br/>
+<div align="center">
+
 ![rtu_x_connections](/images/samples/nettrartu-x/rtu_x_connections.png)
+
+</div>
 <br/>
 Make sure to connect the positive rail of the supply to socket n°1 and its negative rail to socket n°3.
 <br/>
@@ -70,8 +76,12 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 <br/><br/>
 3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
 <br/><br/>
+<div align="center">
+
 
 ![dev_acc_tok](/images/samples/nettrartu_x/dev_acc_tok.png)
+
+</div>
 
 ### Dashboard
 
@@ -93,11 +103,19 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    3. Specify the *"IP"* address **"192.168.4.1"**, *"Port":* **"502"** (by default).
    4. Click on *"Connect"*.
 
+<div align="center">
+
    ![rtu_step1](/images/samples/nettrartu_x/rtu_step1.png)
+
+</div>
 
  - Once you are connected you should see the following:
 
+<div align="center">
+
    ![rtu_step2](/images/samples/nettrartu_x/rtu_step2.png)
+
+</div>
   
  - Then:
    1. Go to *"Communications"*.
@@ -105,13 +123,21 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    3. Check *"Station"* checkbox and fill in the credentials for the WiFi network.
    4. *"Apply Changes"*
    
+<div align="center">
+
    ![rtu_step3](/images/samples/nettrartu_x/rtu_step3.png)
+
+</div>
    
  - Finally:
    1. Go back to *"Home"*.
    2. Make sure the RTU-X has successfully connected to the WiFi network.
 
+<div align="center">
+
    ![rtu_step4](/images/samples/nettrartu_x/rtu_step4.png)
+
+</div>
 
 ## RTU-X configuration <a name="rtu_configuration"></a>
 
@@ -124,7 +150,11 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 3. On *"Interface"* select *"Modem"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*. On *"Password"* paste the Device Acces Token from *"Device"* step.
 4. Click on *"Apply Changes"*.
 
+<div align="center">
+
 ![rtu_step5](/images/samples/nettrartu_x/rtu_step5.png)
+
+</div>
 
 ### Script
 
@@ -141,7 +171,7 @@ uint t_log = 10; // 'variable' log time in seconds
 
 // Loggable variable
 telemetry float variable = 0; // Parameter you want to visualize in Thingsboard
-// 'variable' could be a BLE temperature measurement, a modbus preassure sensor value,
+// 'variable' can be a BLE temperature measurement, a modbus preassure sensor value,
 // a 4-20mA flowmeter value from the analog inputs and many more.
 
 // SCRIPT -----------------------------------------------------------
@@ -153,11 +183,15 @@ while (1)
 }
 ```
 
-1. Go to *"User Interface"* 
+1. Go to *"Script"* 
 2. Import the script clicking *"Load"*. If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
 3. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
-![rtu_step6](/images/samples/nettrartu_x/)
+<div align="center">
+
+![rtu_step6](/images/samples/nettrartu_x/rtu_step6.png)
+
+</div>
 
 ## Data visualization <a name="data_visualization"></a>
 
@@ -166,12 +200,20 @@ Finally, open ThingsBoard Web UI in the Live Demo server with same user and pass
 Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and switch to *"Latest telemetry"* tab.
 If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br/><br/>
 
-![dev](https://user-images.githubusercontent.com/61634031/134029353-d4d80304-0396-4a10-b313-02a249300280.png)
+<div align="center">
+
+![last_telemetry](/images/samples/nettrartu_x/last_telemetry.png)
+
+</div>
 
 After, open *"Dashboards"* section then locate and open *"RTU-X"* dashboard.
 As a result, you will see an analog gauge (similar to dashboard image in the introduction).<br/><br/>
 
-![dash](https://user-images.githubusercontent.com/61634031/134030076-19fd80de-38fd-4114-b1f1-221f61756782.png)
+<div align="center">
+
+![dash](/images/samples/nettrartu_x/dash.png)
+
+</div>
 
 ## See also
 
