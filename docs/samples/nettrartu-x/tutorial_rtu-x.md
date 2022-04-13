@@ -76,7 +76,9 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 
 </div>
 <br><br>
-3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
+
+3. Once the device is created, open its details and click **"Copy access token"** . Please save this device token. It will be referred to later as **"TOKEN"**.
+
 <br><br>
 <div align="center">
 
@@ -146,7 +148,10 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 1. Go to *"Communications"*.
 2. Click on *"MQTT"*.
-3. On *"Interface"* select *"Modem"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*. On *"Password"* paste the Device Acces Token from *"Device"* step.
+3. On *"Interface"* select *"Modem"*. 
+   On *"Format"* select *"Thingsboard"*. 
+   On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*. 
+   On *"Username"* paste the **TOKEN** from the *"Device"* step.
 4. Click on *"Apply Changes"*.
 
 <div align="center">
