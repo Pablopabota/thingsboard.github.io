@@ -70,6 +70,7 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 <br/><br/>
 3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
 <br/><br/>
+
 ![dev_acc_tok](/images/samples/nettrartu_x/dev_acc_tok.png)
 
 ### Dashboard
