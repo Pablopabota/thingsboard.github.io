@@ -104,7 +104,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
  - Once you are connected you should see the following:
 
 <div align="center">
-<img src="/images/samples/nettrartu_x/rtu_step2.png" width="75%"/>
+<img src="/images/samples/nettrartu_x/rtu_step2.png" width="50%"/>
 </div>
   
  - Then:
@@ -116,7 +116,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
 <div align="center">
 <img src="/images/samples/nettrartu_x/rtu_step3.png" />
 </div>
-   
+
  - Finally:
    1. Go back to *"Home"*.
    2. Make sure the RTU-X has successfully connected to the WiFi network.
@@ -186,7 +186,7 @@ Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and s
 If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br><br>
 
 <div align="center">
-<img src="/images/samples/nettrartu_x/last_telemetry.png" />
+<img src="/images/samples/nettrartu_x/last_telemetry.png" width="75%"/>
 </div>
 
 After, open *"Dashboards"* section then locate and open *"RTU-X"* dashboard.
