@@ -69,9 +69,7 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 2. Click on *"+"* button and create a device with the name **"RTU-X"**. Set *"Device type"* to **"default"**.
 <br><br>
 <div align="center">
-
-![add_device](/images/samples/nettrartu_x/add_device.png)
-
+<img src="/images/samples/nettrartu_x/add_device.png" />
 </div>
 <br><br>
 
@@ -79,10 +77,7 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 
 <br><br>
 <div align="center">
-
-
-![dev_acc_tok](/images/samples/nettrartu_x/dev_acc_tok.png)
-
+<img src="/images/samples/nettrartu_x/dev_acc_tok.png" width="75%"/>
 </div>
 
 ### Dashboard
@@ -103,17 +98,13 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    4. Click on *"Connect"*.
 
 <div align="center">
-
-   ![rtu_step1](/images/samples/nettrartu_x/rtu_step1.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step1.png" />
 </div>
 
  - Once you are connected you should see the following:
 
 <div align="center">
-
-   ![rtu_step2](/images/samples/nettrartu_x/rtu_step2.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step2.png" width="75%"/>
 </div>
   
  - Then:
@@ -123,9 +114,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    4. *"Apply Changes"*
    
 <div align="center">
-
-   ![rtu_step3](/images/samples/nettrartu_x/rtu_step3.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step3.png" />
 </div>
    
  - Finally:
@@ -133,9 +122,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
    2. Make sure the RTU-X has successfully connected to the WiFi network.
 
 <div align="center">
-
-   ![rtu_step4](/images/samples/nettrartu_x/rtu_step4.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step4.png" />
 </div>
 
 ## RTU-X configuration <a name="rtu_configuration"></a>
@@ -153,9 +140,7 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 4. Click on *"Apply Changes"*.
 
 <div align="center">
-
-![rtu_step5](/images/samples/nettrartu_x/rtu_step5.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step5.png" />
 </div>
 
 ### Script
@@ -190,9 +175,7 @@ If you want to make your own script, you can see the [Nettra script user manual]
 3. Paste the script. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
 <div align="center">
-
-![rtu_step6](/images/samples/nettrartu_x/rtu_step6.png)
-
+<img src="/images/samples/nettrartu_x/rtu_step6.png" />
 </div>
 
 ## Data visualization <a name="data_visualization"></a>
@@ -203,18 +186,14 @@ Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and s
 If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br><br>
 
 <div align="center">
-
-![last_telemetry](/images/samples/nettrartu_x/last_telemetry.png)
-
+<img src="/images/samples/nettrartu_x/last_telemetry.png" />
 </div>
 
 After, open *"Dashboards"* section then locate and open *"RTU-X"* dashboard.
 As a result, you will see an analog gauge (similar to dashboard image in the introduction).<br><br>
 
 <div align="center">
-
-![dash](/images/samples/nettrartu_x/dash.png)
-
+<img src="/images/samples/nettrartu_x/dash.png" />
 </div>
 
 ## See also
