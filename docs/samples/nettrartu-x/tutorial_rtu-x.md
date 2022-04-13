@@ -52,7 +52,7 @@ The following picture show the pinout of the RTU-X:
 <br><br>
 <div align="center">
 
-![rtu_x_connections](/images/samples/nettrartu-x/rtu_x_connections.png)
+![rtu_x_connections](/images/samples/nettrartu_x/rtu_x_connections.png)
 
 </div>
 <br>
@@ -93,11 +93,8 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
 ## Connect RTU-X to PC <a name="connection_pc"></a>
 
  - Download and install the latest version of [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads).
-
  - Turn on the RTU-X.
-
  - Check your wifi network and connect to "RTU-X-******".
-
  - Open the RTU-X Configuration Interface. 
 
    1. Go to *"Home"*.
@@ -160,8 +157,7 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 ### Script
 
-1. Go to *"Script"* 
-2. Copy this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
+1. Copy this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
 
 ```c
 /*
@@ -186,7 +182,9 @@ while (1)
 }
 ```
 If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
-3. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
+
+2. Go to *"Script"*.
+3. Paste the script. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
 <div align="center">
 
