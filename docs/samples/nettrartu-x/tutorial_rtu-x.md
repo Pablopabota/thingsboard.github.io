@@ -51,11 +51,12 @@ This step shows what is necessary to accomplish this tutorial.
 The following picture show the pinout of the RTU-X:
 <br><br>
 <div align="center">
-<div style="width: 50%;">
+  <div style="width: 50%;">
 
-![rtu_x_connections](/images/samples/nettrartu_x/rtu_x_connections.png)
+<!-- ![rtu_x_connections](/images/samples/nettrartu_x/rtu_x_connections.png) -->
+<img src="/images/samples/nettrartu_x/rtu_x_connections.png" alt="drawing" width="200"/>
 
-</div>
+  </div>
 </div>
 <br>
 Make sure to connect the positive rail of the supply to socket n°1 and its negative rail to socket n°3.
