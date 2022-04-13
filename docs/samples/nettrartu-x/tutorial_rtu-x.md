@@ -28,7 +28,7 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 <div align="center">
 
-![rtu_x](/images/samples/nettrartu_x/rtu_x.png) ![dashboard](/images/samples/nettrartu_x/dashboard.png)
+![rtu_x](/images/samples/nettrartu_x/rtu_x.png) ![dashboard](/images/samples/nettrartu_x/dash.png)
 
 </div>
 
