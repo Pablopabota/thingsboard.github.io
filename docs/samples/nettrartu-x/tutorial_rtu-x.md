@@ -104,7 +104,7 @@ Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboar
  - Once you are connected you should see the following:
 
 <div align="center">
-<img src="/images/samples/nettrartu_x/rtu_step2.png" width="50%"/>
+<img src="/images/samples/nettrartu_x/rtu_step2.png" width="60%"/>
 </div>
   
  - Then:
@@ -143,6 +143,8 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 <img src="/images/samples/nettrartu_x/rtu_step5.png" />
 </div>
 
+If everything is correct, the *"connected"* status should appear in the status bar.
+
 ### Script
 
 1. Copy the next script.
@@ -180,21 +182,27 @@ If you want to make your own script, you can see the [Nettra script user manual]
 
 ## Data visualization <a name="data_visualization"></a>
 
-Finally, open ThingsBoard Web UI in the Live Demo server with same user and password as *ThingsBoard configuration* section.
+Finally, open ThingsBoard Web UI in the Live Demo server with same user and password as [*ThingsBoard configuration*](#tb_configuration) section.
 
 Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and switch to *"Latest telemetry"* tab.
-If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br><br>
+If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br>
 
 <div align="center">
 <img src="/images/samples/nettrartu_x/last_telemetry.png" width="75%"/>
 </div>
 
 After, open *"Dashboards"* section then locate and open *"RTU-X"* dashboard.
-As a result, you will see an analog gauge (similar to dashboard image in the introduction).<br><br>
+As a result, you will see an analog gauge (similar to dashboard image in the introduction) increasing in every loop.<br>
 
 <div align="center">
 <img src="/images/samples/nettrartu_x/dash.png" />
 </div>
+
+## More about the RTU-X
+
+ - Make sure to check [what else you can do with the RTU-X](https://nettra.tech/en/what-we-do/).
+ - If you want to try something else, [here](http://wiki.nettra.tech/en/home) is everything about the RTU-X.
+ - Or maybe we already have the solution to your problem, check our [success cases](https://nettra.tech/en/success-cases/).
 
 ## See also
 
