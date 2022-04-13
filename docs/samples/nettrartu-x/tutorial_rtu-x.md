@@ -148,9 +148,9 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 1. Go to *"Communications"*.
 2. Click on *"MQTT"*.
-3. On *"Interface"* select *"Modem"*. 
-   On *"Format"* select *"Thingsboard"*. 
-   On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*. 
+3. On *"Interface"* select *"Modem"*.<br>
+   On *"Format"* select *"Thingsboard"*.<br>
+   On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*.<br>
    On *"Username"* paste the **TOKEN** from the *"Device"* step.
 4. Click on *"Apply Changes"*.
 
