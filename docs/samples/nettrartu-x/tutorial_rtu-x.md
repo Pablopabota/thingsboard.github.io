@@ -46,7 +46,7 @@ This step shows what is necessary to accomplish this tutorial.
 
 ## Connection diagram <a name="connection_diagram"></a>
 
-The following picture show the pinout of the RTU-X:
+The following picture show the [pinout of the RTU-X](http://wiki.nettra.tech/en/connections):
 <br><br>
 <div align="center">
 <img src="/images/samples/nettrartu_x/rtu_x_connections.png" width="50%"/>
