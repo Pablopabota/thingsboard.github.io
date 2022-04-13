@@ -54,7 +54,7 @@ The following picture show the pinout of the RTU-X:
   <div style="width: 50%;">
 
 <!-- ![rtu_x_connections](/images/samples/nettrartu_x/rtu_x_connections.png) -->
-<img src="/images/samples/nettrartu_x/rtu_x_connections.png" alt="drawing" width="200"/>
+<img src="/images/samples/nettrartu_x/rtu_x_connections.png" alt="drawing" width="50%"/>
 
   </div>
 </div>
