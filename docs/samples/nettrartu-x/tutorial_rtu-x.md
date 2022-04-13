@@ -24,11 +24,11 @@ This guide contains step-by-step instructions on how to connect your Nettra RTU-
 The RTU-X is easly configurable via a [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads). To adapt the RTU-X to each application, it runs a fully customizable script, accessible and editable from the Configuration Interface. In this guide we will provide one as an example quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your sensor data on a dashboard like the following on the right.
-<br /><br>
+<br><br>
 
 <div align="center">
 
-![rtu_x](/images/samples/nettrartu-x/rtu_x.png) ![dashboard](/images/samples/nettrartu-x/dashboard.png)
+![rtu_x](/images/samples/nettrartu_x/rtu_x.png) ![dashboard](/images/samples/nettrartu_x/dashboard.png)
 
 </div>
 
