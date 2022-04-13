@@ -51,9 +51,11 @@ This step shows what is necessary to accomplish this tutorial.
 The following picture show the pinout of the RTU-X:
 <br><br>
 <div align="center">
+<div style="width: 50%;">
 
 ![rtu_x_connections](/images/samples/nettrartu_x/rtu_x_connections.png)
 
+</div>
 </div>
 <br>
 Make sure to connect the positive rail of the supply to socket n°1 and its negative rail to socket n°3.
@@ -65,7 +67,7 @@ This step contains instructions that are necessary to connect your device to Thi
 
 Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or to your Thingsboard instance. See [ThingsBoard installation options](https://thingsboard.io/docs/user-guide/install/installation-options/) page for more details on how to get a Thingsboard instance running.
 
-### Device
+### Device <a name="device"></a>
 
 1. Go to *"Devices"* section. 
 2. Click on *"+"* button and create a device with the name **"RTU-X"**. Set *"Device type"* to **"default"**.
@@ -150,8 +152,8 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 2. Click on *"MQTT"*.
 3. On *"Interface"* select *"Modem"*.<br>
    On *"Format"* select *"Thingsboard"*.<br>
-   On *"URI"* paste *"mqtt://demo.thingsboard.io:1883"*.<br>
-   On *"Username"* paste the **TOKEN** from the *"Device"* step.
+   On *"URI"* paste **mqtt://demo.thingsboard.io:1883** or your Thingsboard instance URI.<br>
+   On *"Username"* paste the **TOKEN** from the [Device](#device) step.
 4. Click on *"Apply Changes"*.
 
 <div align="center">
@@ -162,7 +164,7 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 ### Script
 
-1. Copy this [***script***](/docs/samples/nettrartu-x/resources/rtu_x_script.json).
+1. Copy the next script.
 
 ```c
 /*
@@ -188,7 +190,7 @@ while (1)
 ```
 If you want to make your own script, you can see the [Nettra script user manual](http://wiki.nettra.tech/en/script).
 
-2. Go to *"Script"*.
+2. Go to *"Script"* in the RTU-X configuration interface.
 3. Paste the script. Compile and save the script in the RTU-X by clicking *"Compile & Apply"*.
 
 <div align="center">
