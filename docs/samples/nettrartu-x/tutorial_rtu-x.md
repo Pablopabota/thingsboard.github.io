@@ -24,7 +24,7 @@ This guide contains step-by-step instructions on how to connect your Nettra RTU-
 The RTU-X is easly configurable via a [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads). To adapt the RTU-X to each application, it runs a fully customizable script, accessible and editable from the Configuration Interface. In this guide we will provide one as an example quite simple and easy to understand.
 
 Once you complete this sample/tutorial, you will see your sensor data on a dashboard like the following on the right.
-<br /><br/>
+<br /><br>
 
 <div align="center">
 
@@ -47,15 +47,15 @@ This step shows what is necessary to accomplish this tutorial.
 ## Connection diagram <a name="connection_diagram"></a>
 
 The following picture show the pinout of the RTU-X:
-<br/><br/>
+<br><br>
 <div align="center">
 
 ![rtu_x_connections](/images/samples/nettrartu-x/rtu_x_connections.png)
 
 </div>
-<br/>
+<br>
 Make sure to connect the positive rail of the supply to socket n°1 and its negative rail to socket n°3.
-<br/>
+<br>
 
 ## ThingsBoard configuration <a name="tb_configuration"></a>
   
@@ -67,15 +67,15 @@ Log in ThingsBoard Web UI as [Live Demo](https://demo.thingsboard.io/signup) or 
 
 1. Go to *"Devices"* section. 
 2. Click on *"+"* button and create a device with the name **"RTU-X"**. Set *"Device type"* to **"default"**.
-<br/><br/>
+<br><br>
 <div align="center">
 
 ![add_device](/images/samples/nettrartu_x/add_device.png)
 
 </div>
-<br/><br/>
+<br><br>
 3. Once the device is created, open its details and click *"Copy access token"*. Please save this device token. It will be referred to later as **$TOKEN**.
-<br/><br/>
+<br><br>
 <div align="center">
 
 
@@ -198,7 +198,7 @@ while (1)
 Finally, open ThingsBoard Web UI in the Live Demo server with same user and password as *ThingsBoard configuration* section.
 
 Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and switch to *"Latest telemetry"* tab.
-If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br/><br/>
+If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br><br>
 
 <div align="center">
 
@@ -207,7 +207,7 @@ If all is configured correctly you should be able to see latest values of *"vari
 </div>
 
 After, open *"Dashboards"* section then locate and open *"RTU-X"* dashboard.
-As a result, you will see an analog gauge (similar to dashboard image in the introduction).<br/><br/>
+As a result, you will see an analog gauge (similar to dashboard image in the introduction).<br><br>
 
 <div align="center">
 
